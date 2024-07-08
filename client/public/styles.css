@@ -1,0 +1,60 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+#whiteboard {
+    width: 100vw;
+    height: 100vh;
+    border: 2px solid #000;
+    background-color: #f0f0f0;
+    overflow: hidden; /* Esconde as barras de rolagem */
+    position: relative;
+    cursor: grab;
+}
+
+#boardContainer {
+    width: 2000px; /* Largura do espaço virtual */
+    height: 2000px; /* Altura do espaço virtual */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.post-it {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    border: 1px solid #000;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    position: absolute;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+form {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    width: 80%;
+    max-width: 600px;
+    z-index: 1000; /* Garante que o formulário fique acima do whiteboard */
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-right: 10px;
+    box-sizing: border-box;
+}
+
+form button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
